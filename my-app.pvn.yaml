@@ -1,5 +1,5 @@
 application:
-  name: last9 # replace with your desired app name
+  name: user-service # replace with your desired app name
   releaseChannels:
   - name: staging
     runtimes:
