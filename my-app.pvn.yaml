@@ -1,0 +1,19 @@
+application:
+  name: last9 # replace with your desired app name
+  releaseChannels:
+  - name: staging
+    runtimes:
+    - runtime: emulated-runtime
+  - name: production
+    runtimes:
+    - runtime: emulated-runtime  # can be the same runtime as the previous step
+    preconditions:
+    - releaseChannelStable:
+        releaseChannel: staging
+    - manualApproval: {}
+  annotations:
+    last9:
+      # you can find this in your Levitate dashboard at:
+      # https://app.last9.io/v2/organizations/<org-slug>/datasources
+      data_source: <levitate_data_source_name>
+# ...
